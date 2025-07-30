@@ -114,6 +114,22 @@ public class GMSController implements Initializable {
         String userInput3 = Email.getText().trim();
         String userInput4 = Contact.getText().trim();
 
+        if (userInput1.isEmpty() || userInput2.isEmpty() || userInput3.isEmpty() || userInput4.isEmpty()) {
+            showAlert("Missing Information", "All fields are required. Please fill them all out.");
+            return; // Stop the method if any field is empty
+        }
+        try {
+            int age = Integer.parseInt(userInput2); // Convert age string to a number
+            if (age <= 0 || age > 120) { // Check if the age is in a reasonable range
+                showAlert("Invalid Age", "Please enter a valid age between 1 and 120.");
+                return;
+            }
+        } catch (NumberFormatException e) {
+            // This catches cases where the input is not a number (e.g., "abc")
+            showAlert("Invalid Age", "Age must be a valid number.");
+            return;
+        }
+
         // Validate email and contact number
         if (!isValidEmail(userInput3)) {
             showAlert("Invalid Email", "Please enter a valid email address.");

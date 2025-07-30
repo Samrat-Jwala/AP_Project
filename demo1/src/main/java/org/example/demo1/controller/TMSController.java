@@ -116,6 +116,10 @@ public class TMSController implements Initializable {
         String userInput3 = Add.getText().trim();
         String userInput4 = Contact.getText().trim();
 
+        if (userInput1.isEmpty() || userInput2.isEmpty() || userInput3.isEmpty() || userInput4.isEmpty()) {
+            showAlert("Missing Information", "All fields are required. Please fill them all out.");
+            return; // Stop the method if any field is empty
+        }
 
         int ageValue;
         try {
