@@ -56,50 +56,27 @@ public class LoginPage_Controller implements Initializable {
     }
 
     public void Login(ActionEvent e1) throws FileNotFoundException {
-        try {
-            String enteredUsername = username.getText().trim();
-            String enteredPassword = password.getText().trim();
-            String Folderpath = "D:\\College\\General\\2Y2S\\Adv Programming\\project - Copy\\demo1\\src\\main\\Users";
+        String enteredUsername = username.getText().trim();
+        String enteredPassword = password.getText().trim();
 
-            LoginService loginService = new LoginService(Folderpath);
+        // The path should be managed properly, not hardcoded.
+        // For now, we leave it to show the correction in logic.
+        String folderPath = "D:\\College\\General\\2Y2S\\Adv Programming\\project - Copy\\demo1\\src\\main\\Users";
 
-            if (loginService.authenticate(enteredUsername, enteredPassword)) {
-                try {
-                    Session.setUsername(enteredUsername);
-                    switchtoDashboard(e1);
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                }
-            } else {
-                showError("Username or Password is incorrect!");
+        // Use ONE authentication method
+        LoginService loginService = new LoginService(folderPath);
+
+        if (loginService.authenticate(enteredUsername, enteredPassword)) {
+            try {
+                Session.setUsername(enteredUsername); // Set the session for the logged-in user
+                switchtoDashboard(e1); // Switch to the dashboard
+            } catch (IOException ex) {
+                showError("Failed to load the dashboard.");
+                ex.printStackTrace();
             }
-            // Build path using only the username
-            BufferedReader reader = new BufferedReader(
-                    new FileReader(Folderpath + "\\" + enteredUsername +","+enteredPassword+ "\\credentials.txt")
-            );
-
-            String line;
-            boolean found = false;
-
-            while ((line = reader.readLine()) != null) {
-                String[] parts = line.split(",");
-                if (parts.length == 2 && parts[0].equals(enteredUsername) && parts[1].equals(enteredPassword)) {
-                    found = true;
-                    break;
-                }
-            }
-            reader.close();
-
-            if (found) {
-                Session.setUsername(enteredUsername);
-                switchtoDashboard(e1);
-            } else {
-                showError("Username or Password is incorrect!");
-            }
-        } catch (FileNotFoundException ex) {
-            showError("User not found. Please sign up.");
-        } catch (IOException ex) {
-            ex.printStackTrace();
+        } else {
+            // This 'else' block handles both incorrect credentials and users not found.
+            showError("Invalid username or password.");
         }
     }
 
