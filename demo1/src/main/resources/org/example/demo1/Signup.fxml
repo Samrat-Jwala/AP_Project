@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo1.controller.SignupController">
+   <top>
+      <HBox alignment="BOTTOM_CENTER" prefHeight="91.0" prefWidth="600.0" BorderPane.alignment="TOP_LEFT">
+         <children>
+            <Label fx:id="Signup" alignment="CENTER" prefHeight="18.0" prefWidth="62.0" style="-fx-background-color: Red;" text="Sign Up" textAlignment="CENTER" textFill="WHITE" textOverrun="LEADING_WORD_ELLIPSIS">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER_RIGHT" prefHeight="284.0" prefWidth="119.0">
+               <children>
+                  <Label fx:id="FName1" prefHeight="18.0" prefWidth="70.0" text="First Name: ">
+                     <VBox.margin>
+                        <Insets bottom="7.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="LName1" text="Last Name: ">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Passw" layoutX="82.0" layoutY="143.0" text="Password: ">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="CPassw" layoutX="82.0" layoutY="169.0" text="Confirm Password:  ">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="25.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="23.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="300.0" prefWidth="83.0" />
+            <VBox alignment="CENTER_LEFT" prefHeight="307.0" prefWidth="180.0">
+               <children>
+                  <TextField fx:id="FName" onAction="#focusLName">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="LName" onAction="#focusPass">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <PasswordField fx:id="Pass" onAction="#focusCPass">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </PasswordField>
+                  <PasswordField fx:id="CPass" onAction="#Continue">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </PasswordField>
+                  <Label fx:id="warning_label" text=" ">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="21.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="continue_btn" mnemonicParsing="false" onAction="#Continue" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #83d18f;" text="Continue" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="back_btn" mnemonicParsing="false" onAction="#switchtoLoginpage" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: REd;" text="Back" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="2.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="23.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

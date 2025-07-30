@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('file:/D:/College/General/2Y2S/Adv%20Programming/project/demo1/src/main/java/org/example/demo1/Background1.jpg'); -fx-background-size: cover;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo1.controller.LoginPage_Controller">
+   <children>
+      <HBox prefHeight="374.0" prefWidth="600.0">
+         <children>
+            <VBox alignment="CENTER_RIGHT" prefHeight="242.0" prefWidth="270.0">
+               <children>
+                  <Label fx:id="user_label1" text="USERNAME:">
+                     <VBox.margin>
+                        <Insets bottom="3.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pass_label" text="PASSWORD:" textFill="#101010">
+                     <VBox.margin>
+                        <Insets top="12.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets top="50.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets right="8.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="247.0" prefWidth="157.0">
+               <children>
+                  <TextField fx:id="username" onAction="#focusPassword" prefHeight="26.0" prefWidth="217.0">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin></TextField>
+                  <PasswordField fx:id="password" onAction="#focusLogin" prefHeight="26.0" prefWidth="140.0">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </PasswordField>
+                  <Label fx:id="user_label" text=" ">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets top="50.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="276.0" prefWidth="186.0">
+               <children>
+                  <ComboBox fx:id="languageComboBox" prefWidth="150.0" promptText="Select Language">
+                     <VBox.margin>
+                        <Insets right="20.0" top="50.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <Button fx:id="button_login" mnemonicParsing="false" onAction="#Login" text="-&gt;">
+                     <VBox.margin>
+                        <Insets bottom="23.0" right="140.0" top="80.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="221.0" prefWidth="600.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="121.0" prefWidth="230.0">
+               <children>
+                  <Label fx:id="OR" prefHeight="52.0" prefWidth="26.0" text="OR">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="New_user" mnemonicParsing="false" onAction="#switchtoSignup" style="-fx-background-color: Transparent;" text="New User, Sign up" textFill="#0d0d0d" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <BorderPane prefHeight="200.0" prefWidth="600.0" />
+   </children>
+</VBox>
