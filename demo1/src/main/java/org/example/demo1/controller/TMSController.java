@@ -60,7 +60,7 @@ public class TMSController implements Initializable {
 
         ObservableList<TMSCLASS> observableList = FXCollections.observableArrayList();
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("D:\\College\\General\\2Y2S\\Adv Programming\\project\\demo1\\src\\main\\java\\org\\example\\demo1\\util\\TMSRecord"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("D:\\College\\General\\2Y2S\\Adv Programming\\project - Copy\\demo1\\src\\main\\java\\org\\example\\demo1\\util\\TMSRecord"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] fields = line.split(",");

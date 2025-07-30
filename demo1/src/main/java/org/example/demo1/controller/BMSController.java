@@ -142,7 +142,7 @@ public class BMSController implements Initializable {
                 if (parts.length == 4) {
                     LocalDate startDate = LocalDate.parse(parts[1].trim());
                     LocalDate endDate = LocalDate.parse(parts[2].trim());
-                    int discount = Integer.parseInt(parts[3].trim());
+                    int discount = (int) Double.parseDouble(parts[3].trim());
 
                     if (!selectedDate.isBefore(startDate) && !selectedDate.isAfter(endDate)) {
                         maxDiscount = Math.max(maxDiscount, discount);
