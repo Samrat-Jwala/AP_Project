@@ -11,6 +11,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import org.example.demo1.service.LoginService;
 
 
 import java.io.BufferedReader;
@@ -30,10 +31,10 @@ public class LoginPage_Controller implements Initializable {
     private Button New_user;
 
     @FXML
-    private TextField username;
+    public TextField username;
 
     @FXML
-    private PasswordField password;
+    public PasswordField password;
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -60,6 +61,18 @@ public class LoginPage_Controller implements Initializable {
             String enteredPassword = password.getText().trim();
             String Folderpath = "D:\\College\\General\\2Y2S\\Adv Programming\\project - Copy\\demo1\\src\\main\\Users";
 
+            LoginService loginService = new LoginService(Folderpath);
+
+            if (loginService.authenticate(enteredUsername, enteredPassword)) {
+                try {
+                    Session.setUsername(enteredUsername);
+                    switchtoDashboard(e1);
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            } else {
+                showError("Username or Password is incorrect!");
+            }
             // Build path using only the username
             BufferedReader reader = new BufferedReader(
                     new FileReader(Folderpath + "\\" + enteredUsername +","+enteredPassword+ "\\credentials.txt")

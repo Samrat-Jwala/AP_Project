@@ -62,7 +62,6 @@ public class AMPController implements Initializable {
         preference.setCellValueFactory(new PropertyValueFactory<>("Preference"));
 
         ObservableList<AMPCLASS> observableList = FXCollections.observableArrayList();
-
         try (BufferedReader reader = new BufferedReader(new FileReader("D:\\College\\General\\2Y2S\\Adv Programming\\project - Copy\\demo1\\src\\main\\java\\org\\example\\demo1\\util\\AMPRecords.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
