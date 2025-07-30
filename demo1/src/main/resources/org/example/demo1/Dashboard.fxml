@@ -23,7 +23,7 @@
    <center>
       <TilePane prefHeight="200.0" prefTileWidth="145.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="Attraction" mnemonicParsing="false" onAction="#switchtoAttraction" prefHeight="99.0" prefWidth="138.0" text="Attraction" textFill="WHITE">
+            <Button fx:id="Attraction" mnemonicParsing="false" onAction="#switchtoAttraction" prefHeight="99.0" prefWidth="138.0" style="-fx-background-color: #CAF0F8;" text="Attraction" textFill="WHITE">
                <TilePane.margin>
                   <Insets bottom="5.0" />
                </TilePane.margin>
@@ -31,7 +31,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="Guide_Management" mnemonicParsing="false" onAction="#switchtoGMS" prefHeight="99.0" prefWidth="138.0" text="Guide Management" textFill="WHITE">
+            <Button fx:id="Guide_Management" mnemonicParsing="false" onAction="#switchtoGMS" prefHeight="99.0" prefWidth="138.0" style="-fx-background-color: #90E0EF;" text="Guide Management" textFill="WHITE">
                <TilePane.margin>
                   <Insets bottom="5.0" />
                </TilePane.margin>
@@ -39,7 +39,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="Booking" mnemonicParsing="false" onAction="#switchtoBooking" prefHeight="99.0" prefWidth="138.0" text="Booking" textFill="WHITE">
+            <Button fx:id="Booking" mnemonicParsing="false" onAction="#switchtoBooking" prefHeight="99.0" prefWidth="138.0" style="-fx-background-color: #7AC2f1;" text="Booking" textFill="WHITE">
                <TilePane.margin>
                   <Insets bottom="5.0" />
                </TilePane.margin>
@@ -47,7 +47,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="Occasion_Discount" mnemonicParsing="false" onAction="#switchtoOccDiscount" prefHeight="99.0" prefWidth="138.0" text="Occasion Discount" textFill="WHITE">
+            <Button fx:id="Occasion_Discount" mnemonicParsing="false" onAction="#switchtoOccDiscount" prefHeight="99.0" prefWidth="138.0" style="-fx-background-color: #00b4d8;" text="Occasion Discount" textFill="WHITE">
                <TilePane.margin>
                   <Insets bottom="5.0" />
                </TilePane.margin>
@@ -55,22 +55,22 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="Tourist_Management" mnemonicParsing="false" onAction="#switchtoTMS" prefHeight="99.0" prefWidth="138.0" text="Tourist Management" textFill="WHITE">
+            <Button fx:id="Tourist_Management" mnemonicParsing="false" onAction="#switchtoTMS" prefHeight="99.0" prefWidth="138.0" style="-fx-background-color: #023e8a;" text="Tourist Management" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="Reports" mnemonicParsing="false" onAction="#switchtoReport" prefHeight="99.0" prefWidth="138.0" text="Reports" textFill="WHITE">
+            <Button fx:id="Reports" mnemonicParsing="false" onAction="#switchtoReport" prefHeight="99.0" prefWidth="138.0" style="-fx-background-color: #03045E;" text="Reports" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="Alerts" mnemonicParsing="false" onAction="#switchtoAlerts" prefHeight="99.0" prefWidth="138.0" text="Alerts" textFill="WHITE">
+            <Button fx:id="Alerts" mnemonicParsing="false" onAction="#switchtoAlerts" prefHeight="99.0" prefWidth="138.0" style="-fx-background-color: #0096c7;" text="Alerts" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="Emergency_Details" mnemonicParsing="false" onAction="#switchtoEmergencyDetails" prefHeight="99.0" prefWidth="138.0" text="Emergency Details" textFill="WHITE">
+            <Button fx:id="Emergency_Details" mnemonicParsing="false" onAction="#switchtoEmergencyDetails" prefHeight="99.0" prefWidth="138.0" style="-fx-background-color: #0077b6;" text="Emergency Details" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
